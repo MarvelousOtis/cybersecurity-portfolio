@@ -68,3 +68,13 @@ This exercise provided practical experience in reviewing Windows authentication 
 - Interpreting logon types
 - Basic PowerShell log filtering
 - Security investigation and documentation
+
+## 8. Screenshots
+
+### Failed Login Event (Event ID 4625)
+
+![Failed Login Event](failed-login-event.png)
+
+### Successful Interactive Login Events (Event ID 4624)
+
+![Successful Login Events](successful-login-events.png)
