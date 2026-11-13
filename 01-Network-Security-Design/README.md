@@ -107,3 +107,11 @@ Through this project, I gained practical experience with:
 ### 7. Project Status
 
 Completed.
+
+## Project Screenshots
+
+### Network Topology
+![NetworkTo](https://github.com/MarvelousOtis/cybersecurity-portfolio/blob/main/01-Network-Security-Design/Network%20Topology.PNG)
+
+### ACL Configuration
+![[ACL Configuration](./acl-configuration.png)](https://github.com/MarvelousOtis/cybersecurity-portfolio/blob/main/01-Network-Security-Design/ACL%20Configuration.PNG)
