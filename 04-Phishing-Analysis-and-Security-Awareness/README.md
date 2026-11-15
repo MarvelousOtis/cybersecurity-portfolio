@@ -66,3 +66,23 @@ During this exercise, I submitted the test URL `https://example.com`.
 - Making evidence-based security assessments.
 
 **Project Status:** In Progress
+
+### Network Requests and External Links
+
+During the VirusTotal investigation of `https://example.com`, I examined the Network Requests / HTTPs Transactions section.
+
+**Observations:**
+- Two network requests were listed.
+- Both requests returned HTTP status code 200.
+- Neither URL received a malicious detection from the 93 security vendors.
+- One external outbound link pointed to IANA's example-domain information page.
+
+**Analysis:**
+
+The results showed that the website made or was associated with multiple network requests and referenced an external website. These findings were not suspicious on their own.
+
+During phishing investigations, unexpected redirects or external links may require further examination, especially when the destination domain differs from the organisation the email claims to represent.
+
+**Key Learning:**
+
+A redirect or external link is not automatically malicious. Analysts should examine the destination and consider it alongside other evidence before making a decision.
