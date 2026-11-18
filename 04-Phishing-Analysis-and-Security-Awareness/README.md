@@ -146,3 +146,62 @@ If an employee entered their credentials on the suspicious website, recommended 
 - Early reporting and incident response can reduce the impact of credential theft.
 
 **Exercise Status:** Completed (Simulated Investigation)
+
+## VirusTotal Community and Sandbox Analysis
+
+### Overview
+
+The VirusTotal Community section was examined to understand how community comments and sandbox analysis can provide additional information during a domain investigation.
+
+The domain investigated was `paypal.com`.
+
+### 1. Sandbox Analysis
+
+A Joe Sandbox analysis associated with the domain displayed the following results:
+
+- **Verdict:** CLEAN
+- **Score:** 2/100
+
+The sandbox also listed several domains and IP addresses associated with its analysis.
+
+These included services related to PayPal, Google, Facebook, advertising and content delivery.
+
+**Interpretation:** The sandbox returned a clean verdict for this particular analysis. However, this does not guarantee that the domain is completely free from security risks.
+
+### 2. Community Comments
+
+Several VirusTotal community users had classified the domain as safe or benign.
+
+Examples included:
+
+- `#Safe`
+- `Payment site. #safe`
+- `#benign`
+
+One older comment also expressed concern about the possibility of the website being compromised.
+
+**Interpretation:** Community comments provide additional context, but they are user-submitted opinions and should not be treated as conclusive security evidence.
+
+### 3. Key Security Lessons
+
+- Sandbox analysis helps examine website or file behaviour in a controlled environment.
+- A clean sandbox verdict does not guarantee complete safety.
+- Community comments can provide useful context but may be outdated or inaccurate.
+- Security analysts should compare findings from multiple sources before making a decision.
+- Domains and IP addresses appearing in a report are not automatically malicious.
+
+### 4. Introduction to Indicators of Compromise (IOCs)
+
+Indicators of Compromise (IOCs) are observable pieces of evidence that may suggest a system or network has been compromised.
+
+Examples include:
+
+- Suspicious IP addresses
+- Malicious domains
+- Suspicious URLs
+- Malware file hashes
+- Unusual network connections
+
+The domains and IP addresses observed in the sandbox report are potential investigation leads, not confirmed IOCs.
+
+**Exercise Status:** Completed (Domain Reputation and Sandbox Analysis)
