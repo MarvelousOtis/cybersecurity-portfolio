@@ -78,3 +78,72 @@ This exercise provided practical experience in reviewing Windows authentication 
 ### Successful Interactive Login Events (Event ID 4624)
 
 ![Successful Login Events](successful-login-events.png)
+
+---
+
+## Case Study 2: Windows Authentication Monitoring (25–27 November 2026)
+
+### Objective
+Investigate repeated Windows authentication failures, examine associated event details, and determine whether the activity indicates suspicious behaviour.
+
+### Tools Used
+- Windows Event Viewer
+- Windows PowerShell
+- Windows Security Logs
+
+### Investigation Process
+- Examined Event ID 4625 to identify failed authentication attempts.
+- Reviewed Event ID 4624 to compare successful logon activity.
+- Investigated Logon Types and authentication status codes.
+- Examined associated processes, account identifiers, and source IP information.
+- Used PowerShell to filter and compare recent security events.
+
+### Key Findings
+
+**Failed Authentication Events (4625)**
+
+The 20 most recent failed logon events examined shared the following characteristics:
+
+| Field | Finding |
+|---|---|
+| Event ID | 4625 |
+| Logon Type | 2 (Interactive) |
+| Status | 0xc000006e |
+| Associated Process | chrome.exe |
+| Source IP | Not recorded |
+| Target SID | S-1-0-0 (Null SID) |
+
+All 20 events shared the same observed characteristics.
+
+**Successful Authentication Events (4624)**
+
+- The 10 most recent successful events initially examined were Logon Type 5 (Service).
+- Two additional successful Logon Type 2 events were identified on 27 November 2026 at approximately 9:52 AM.
+- These two events were consistent with the user's reported computer activity.
+
+### Analysis
+
+The repeated failed authentication events indicated a consistent pattern of interactive authentication failures.
+
+The status code `0xc000006e` represents `STATUS_ACCOUNT_RESTRICTION`. However, the specific restriction responsible could not be determined.
+
+Although `chrome.exe` was associated with the events, this did not establish that browser activity caused them.
+
+The Null SID and absence of a recorded source IP also limited the ability to identify the attempted account and origin of the activity.
+
+### Recommendations
+1. Strengthen local account security with appropriate sign-in protection.
+2. Continue monitoring repeated failed authentication events.
+3. Investigate associated processes if the activity persists.
+4. Review local account and authentication policies.
+5. Maintain appropriate Windows Security log retention.
+
+### Conclusion
+
+The investigation provided practical experience in Windows authentication monitoring, event filtering, identifying repeated patterns, and interpreting security event details.
+
+The available evidence was insufficient to confirm malicious activity or establish the source of the failed authentication attempts.
+
+**Investigation outcome:** Inconclusive; further monitoring and investigation would be required.
+
+**Note:** This was a personal hands-on learning exercise conducted on a Windows 10 system.
